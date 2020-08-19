@@ -13,7 +13,7 @@ const d3 = require('d3');
 const techan = require('techan');
 const chart = require('./chart.js');
 
-axios.get('https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1w&limit=100')
+axios.get('https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limit=100')
   .then(data => {
     const csvData = data.data.map(d => {
       return {
