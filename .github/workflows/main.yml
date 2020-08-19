@@ -1,0 +1,21 @@
+name: main
+
+on:
+  push:
+    branches:
+      - master
+jobs:
+  hello_world_job:
+    runs-on: ubuntu-latest
+    name: Print a Bitcoin chart
+    steps:
+      # To use this repository's private action,
+      # you must check out the repository
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Save the new Bitcoin chart
+        uses: ./ # Uses an action in the root directory
+        id: chart
+      - uses: stefanzweifel/git-auto-commit-action@v4
+        with:
+          commit_message: Apply automatic changes

@@ -1,1 +1,3 @@
-# bitcoin-stats
+# Bitcoin Stats
+
+<img src="./chart.svg">

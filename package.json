@@ -1,0 +1,26 @@
+{
+  "name": "bitcoin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "ncc build index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blombard/bitcoin.git"
+  },
+  "keywords": [],
+  "author": "Baptiste Lombard",
+  "license": "MIT",
+  "homepage": "https://github.com/blombard/bitcoin#readme",
+  "dependencies": {
+    "@actions/core": "^1.2.4",
+    "@actions/github": "^4.0.0",
+    "axios": "^0.19.2",
+    "jsdom": "^16.4.0",
+    "moment": "^2.27.0",
+    "techan": "^0.8.0"
+  }
+}
