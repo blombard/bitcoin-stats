@@ -37,4 +37,19 @@ axios.get('https://api.binance.com/api/v3/klines?symbol=BTCUSDT&interval=1d&limi
       stream.write(body.html());
       stream.end();
     });
+
+    axios.get('https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT')
+      .then(data => {
+        const { priceChangePercent, lastPrice, highPrice, lowPrice } = data.data;
+        const stats = `|$${parseFloat(lastPrice).toFixed(2)}|${parseFloat(priceChangePercent).toFixed(2)}%|$${parseFloat(highPrice).toFixed(2)}|$${parseFloat(lowPrice).toFixed(2)}|\n\n`;
+        var stream = fs.createWriteStream("README.md");
+        stream.once('open', function(fd) {
+          stream.write('# Bitcoin Stats\n\n');
+          stream.write('BTC/USDT|24h change|24h high|24h low|\n');
+          stream.write('|---|---|---|---|\n');
+          stream.write(stats);
+          stream.write('<img src="./chart.svg">\n');
+          stream.end();
+        });
+      })
   })
