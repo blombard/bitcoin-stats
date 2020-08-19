@@ -20,6 +20,6 @@ jobs:
         with:
           commit_message: Update Bitcoin chart
 
-          commit_user_name: GitHub Actions Bot
-          commit_user_email: my-github-actions-bot@example.org
+          commit_user_name: actions-user
+          commit_user_email: actions@github.com
           commit_author: Author <actions@github.com>
