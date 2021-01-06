@@ -2,7 +2,7 @@ name: main
 
 on:
   schedule:
-    - cron: '*/10 * * * *'
+    - cron: '*/30 * * * *'
 
 jobs:
   hello_world_job:
