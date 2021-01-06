@@ -16,11 +16,11 @@
   "license": "MIT",
   "homepage": "https://github.com/blombard/bitcoin#readme",
   "dependencies": {
-    "@actions/core": "^1.2.4",
+    "@actions/core": "^1.2.6",
     "@actions/github": "^4.0.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "jsdom": "^16.4.0",
-    "moment": "^2.27.0",
+    "moment": "^2.29.1",
     "techan": "^0.8.0"
   }
 }
