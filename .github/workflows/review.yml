@@ -11,7 +11,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - name: Save the new Bitcoin chart
+    - name: Remind the reviewer
       uses: ./ # Uses an action in the root directory
       with:
         token: "${{ secrets.GITHUB_TOKEN }}"

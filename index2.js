@@ -4,13 +4,20 @@ const github = require('@actions/github');
 const run = async () => {
   try {
     const token = core.getInput('token', { required: true });
+    console.log(token);
     const reviewComment = core.getInput('reminder-comment');
+    console.log(reviewComment);
     const daysBeforeReminder = core.getInput('days-before-reminder');
+    console.log(daysBeforeReminder);
 
     const octokit = github.getOctokit(token);
+    console.log(octokit);
     const owner = github.context.payload.sender && github.context.payload.sender.login;
+    console.log(owner);
     const repo = github.context.payload.repositor && github.context.payload.repository.name;
+    console.log(repo);
     const { data } = await octokit.pulls.list({ owner, repo, state: 'open' });
+    console.log(data);
 
     data.forEach(({ requested_reviewers, updated_at, number }) => {
       if (rightTimeForReminder(updated_at, daysBeforeReminder)) {
