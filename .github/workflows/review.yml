@@ -11,8 +11,10 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - uses: blombard/review-reminder@v0.1
-      with:
-        token: "${{ secrets.GITHUB_TOKEN }}"
-        reminder-comment: "Don't forget to review this PR !"
-        days-before-reminder: '0'
+    - uses: blombard/lambda-monorepo@v5.4
+
+    # - uses: blombard/review-reminder@v0.1
+    #   with:
+    #     token: "${{ secrets.GITHUB_TOKEN }}"
+    #     reminder-comment: "Don't forget to review this PR !"
+    #     days-before-reminder: '0'
