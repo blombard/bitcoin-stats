@@ -1,6 +1,5 @@
-name: 'Bitcoin Stats'
-description: 'Save the new Bitcoin chart'
+name: 'Review reminder'
+description: 'Review reminder'
 runs:
   using: 'node12'
-  main: 'index.js'
-  # main: 'dist/index.js'
+  main: 'index2.js'

@@ -1,0 +1,6 @@
+name: 'Bitcoin Stats'
+description: 'Save the new Bitcoin chart'
+runs:
+  using: 'node12'
+  main: 'index.js'
+  # main: 'dist/index.js'
