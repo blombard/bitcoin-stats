@@ -11,7 +11,7 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
-    - uses: blombard/lambda-monorepo@v5.4
+    - uses: blombard/lambda-monorepo@v0.4
 
     # - uses: blombard/review-reminder@v0.1
     #   with:
