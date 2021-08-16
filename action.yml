@@ -1,17 +1,6 @@
-name: 'Review reminder'
-description: 'Review reminder'
-inputs:
-  token:
-    description: 'token'
-    required: true
-  reminder-comment:
-    description: 'comment'
-    default: "Don't forget to review this PR !" # Note that "Hey @reviewer1, @reviewer2, @... !" will be appended before.
-    required: false
-  days-before-reminder:
-    description: 'days-before-reminder'
-    default: '1'
-    required: true
+name: 'Bitcoin Stats'
+description: 'Save the new Bitcoin chart'
 runs:
   using: 'node12'
-  main: 'index2.js'
+  main: 'index.js'
+  # main: 'dist/index.js'
