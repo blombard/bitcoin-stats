@@ -11,10 +11,11 @@ const run = async () => {
     console.log(daysBeforeReminder);
 
     const octokit = github.getOctokit(token);
-    console.log(octokit);
+    // console.log(octokit);
     const owner = github.context.payload.sender && github.context.payload.sender.login;
     console.log(owner);
-    const repo = github.context.payload.repositor && github.context.payload.repository.name;
+    console.log(github.context.payload);
+    const repo = github.context.payload.repository && github.context.payload.repository.name;
     console.log(repo);
     const { data } = await octokit.pulls.list({ owner, repo, state: 'open' });
     console.log(data);
