@@ -13,6 +13,12 @@ jobs:
       # you must check out the repository
       - name: Checkout
         uses: actions/checkout@v2
+      - name: Ping for review
+        uses: blombard/review-reminder@master
+        with:
+          token: "${{ secrets.GITHUB_TOKEN }}"
+          reminder-comment: "Don't forget to review this PR !"
+          days-before-reminder: '0'
       - name: Save the new Bitcoin chart
         uses: ./ # Uses an action in the root directory
         id: chart
