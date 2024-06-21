@@ -18,7 +18,7 @@
   "dependencies": {
     "@actions/core": "^1.2.6",
     "@actions/github": "^4.0.0",
-    "axios": "^0.21.1",
+    "axios": "^0.28.0",
     "jsdom": "^16.4.0",
     "moment": "^2.29.1",
     "techan": "^0.8.0"
